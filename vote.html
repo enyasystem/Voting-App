@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vote your best tech Lord</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!--Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/vote.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Campbell Street, New York, USA</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+234 345 6789</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@mail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0" style="color: #091E3E;">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="#" class="navbar-brand p-0">
+                <h1 class="m-0" style="color: #091E3E;"><i class="fa fa-user-tie me-2"></i>Campbell Polls</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="#" class="nav-item nav-link active" style="color: #091E3E;">Home</a>
+                    <a href="#" class="nav-item nav-link" style="color: #091E3E;">About</a>
+                    <a href="#" class="nav-item nav-link" style="color: #091E3E;">Sign Up</a>
+                    <a href="#" class="nav-link " style="color: #091E3E;">Sign In</a>
+                    <a href="#" class="nav-item nav-link" style="color: #091E3E;">Contact</a>
+                </div>
+                <a href="index.html" class="btn btn-primary py-2 px-4 ms-3">Go to Main Page</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!--Site Map and voting section Start-->
+    <div class="main-vt-ctn" style="margin-top: 130px;">
+        <div>
+            <div style="max-width: 700px;">
+                <div  id="map">        
+                </div>
+            </div>
+        </div>
+        <div class="vt-sectn-ctn">
+            <div class="text-center">
+                <h3 class="title-pg">Vote for the best Tech Lord in US</h3>
+                <p class="error-message" id="er-section" style="color: red; margin-top: -15px;"></p>
+            </div>           
+            <form id="form" name="forms"><!--form section-->
+                <div>
+                    <div class="row-banner" id="rw-bn-1">
+                        <div id="banner-1">
+                            <img onmouseover="grayscale()" onmouseout="removeGrayscale()" class="vt-img" id="cp-photo" src="img/campbell.jfif" alt="Campbell Photo">
+                        </div>
+                        <div class="info-sect">
+                            <div>
+                                <input type="radio" name="contestants" value="edward" id="edward">
+                                <label class="text-white" class="cs" for="edward">Edward Campbell</label>                         
+                            </div>
+                                <!--<div class="bar">--><progress value="0" max="100" id="inner-bar-1"> </progress><!--</div>--><span class="text-white score-bd" id="score-1"></span>
+                        </div>
+                    </div>
+                    <div class="row-banner" id="rw-bn-2">
+                        <div id="banner-2">
+                            <img onmouseover="grayscaleTwo()" onmouseout="removeGrayscale()" class="vt-img" id="el-photo" src="img/elon.jpg" alt="Elon Photo">
+                        </div>
+                        <div class="info-sect">
+                            <div>
+                                <input type="radio" name="contestants" value="elon" id="elon">
+                                <label class="text-dark" class="cs" for="elon">Elon Musk</label>                         
+                            </div>
+                            <!--<div class="bar" id="bar-2">--><progress value="0" max="100" id="inner-bar-2"></progress><!--</div>--><span class="text-dark score-bd" id="score-2"></span>
+                        </div>
+                    </div>
+                    <div class="text-center" id="lbl-section">
+                        <div class="cty-pt">
+                            <label class="" for="cities" id="City">Select your City:</label>
+                            <select name="City" id="cities">
+                                <option value="">Choose city</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Florida">Florida</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Texas">Texas</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Wyoming">Wyoming</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Washington">Washington</option>
+                                <option value="California">California</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Idaho">Idaho</option>
+                            </select>
+                            <p class="error-message" id="er-section1" style="color: red;"></p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <input type="button" value="Cast Vote" class="sb-btn" id="button">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Site Map and voting section End-->
+    <footer>
+        <div class="container-fluid bg-dark px-5  d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <small class="me-3 text-light">&copy; Group 7 Edward Campbell Mentorship</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+     <!--Javascript Maps libraries-->
+     <script src="js/mapdata.js"></script>
+     <script src="js/usmap.js"></script>
+     <script src="js/select.js"></script>
+
+    <!--Javascript link-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
