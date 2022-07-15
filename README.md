@@ -14,8 +14,9 @@ At the Edward Campbell Mentorship Program, we were assigned many task and one of
 ## Images
 Homepage
 ![alt text](img/homepage.gif)
+
 Voting Page
-![alt text](startup2-1.0.0/img/votepage.JPG)
+![alt text](img/votepage.JPG)
 
 ## Authors
 - [Akeh Emmanuel Unimke](https://github.com/Akeh9ja)
